@@ -22,7 +22,6 @@ function SinglePropertyPage() {
   
   return (
     <>
-    <NavBar/>
     SinglePropertyPage</>
   )
 }
