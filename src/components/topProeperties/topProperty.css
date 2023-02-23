@@ -1,0 +1,48 @@
+.topproperty {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.topproperty_wrapper {
+  box-sizing: border-box;
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.topproperty_single {
+  height: 200px;
+  overflow: hidden;
+}
+
+.topproperty_single > * {
+  color: black;
+  position: relative !important; 
+}
+.topproperty_single > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+.topproperty_single > p {
+  background: linear-gradient(to bottom, transparent 0%, black 100%);;
+  border-radius: 0 0 15px 15px;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  text-align: center;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}

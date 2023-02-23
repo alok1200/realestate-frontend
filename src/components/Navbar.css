@@ -1,0 +1,36 @@
+.navbar {
+  position: sticky;
+  top: 0;
+display: flex;
+background-color: black;
+color: white;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+z-index: 1000;
+}
+
+.navbar-brand {
+font-size: 1.5rem;
+font-weight: bold;
+color: white;
+text-decoration: none;
+}
+
+.navbar-links {
+display: flex;
+}
+
+.navbar-link {
+              color: white;
+margin-left: 20px;
+text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+.navbar-links {
+              display: none;
+}
+}
+
