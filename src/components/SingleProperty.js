@@ -7,7 +7,7 @@ function SingleProperty({p}) {
   return (
     <div className='singelprop'>
     <div className='singleprop_img_container '>
-      <img src={p.image}></img>
+      <img src={Array.isArray(p.image) ? p.image[0] : p.image}></img>
     </div>
     <div className='singleprop_info'>
       <p>{p.category}</p>

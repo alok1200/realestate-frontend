@@ -1,100 +1,112 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import NavBar from "../components/NavBar.js"
 import style from "./SinglePropertyPage.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed , faPeopleRobbery, faHome} from '@fortawesome/free-solid-svg-icons'
+import ImageGallery from '../components/Image gallary/ImageGallery.js'
 
 function SinglePropertyPage() {
   const location = useLocation()
   const id = location.pathname.split('/')[2]
 
+  const [property, setProperty] = useState()
+  const [isImagesOpen, setIsImagesOpen] = useState(false)
+
   useEffect(() => {
     (async () => {
       try {
         const { data } = await axios.get(`http://localhost:4000/property/${id}`)
-        console.log(data)
+        setProperty(data)
       } catch (err) {
         console.log(err)
       }
     })()
   }, [])
+ 
+  console.log(property)
 
 
   return (
     <>
-      <NavBar/>
-      <div className={style.container}>
-        <div className={style.topSection}>
-          <div className={style.left}>
-            <FontAwesomeIcon icon={faHome}/>
-            Rent
-          </div>
-          <div className={style.middle}>
-            <p style={{fontSize: "1.3rem", fontWeight: 600}}>1 BHK Flat For Rent In Rajaji Nagar</p>
-            <p>Standalone building, Dr Rajkumar Rd near Orion Mall</p>
-          </div>
-          <div className={style.right}>
-            <button>Contect Owner</button>
-          </div>
-        
-        </div>
-
-        <div className={style.wrapper}>
-          <div className={style.imagesContainer}>
-            <div className={style.leftImage}>
-              <img className={style.img} src='https://images.nobroker.in/images/ff8081816ce31ed2016ce7b8f38447a2/ff8081816ce31ed2016ce7b8f38447a2_4185_469390_large.jpg'></img>
-            </div>
-            <div className={style.rightImage}>
-              <img className={style.img} src='https://images.nobroker.in/images/ff8081816ce31ed2016ce7b8f38447a2/ff8081816ce31ed2016ce7b8f38447a2_60362_828529_large.jpg'></img>
-              <img className={style.img} src='https://images.nobroker.in/images/ff8081816ce31ed2016ce7b8f38447a2/ff8081816ce31ed2016ce7b8f38447a2_4698_320949_large.jpg'></img>
-            </div>
-          </div>
-
-          <div className={style.infoContainer}>
-            <div className={style.infoWrapper}>
-
-              <div className={style.leftInfo}>
-                <div className={style.singleInfo}>
-                <FontAwesomeIcon icon={faBed}/>
-                  <div>
-                    <p>Size</p>
-                    <span>1200</span>
-                  </div>
+      {property ? 
+              <div className={style.container}>
+              <div className={style.topSection}>
+                <div className={style.left}>
+                  <FontAwesomeIcon icon={faHome}/>
+                  {property.category}
                 </div>
-
-                <div className={style.singleInfo}>
-                  <FontAwesomeIcon icon={faPeopleRobbery}/>
-                  <div>
-                    <p>price</p>
-                    <span>3 cr</span>
-                  </div>
+                <div className={style.middle}>
+                  <p style={{fontSize: "1.3rem", fontWeight: 600}}>{property.title}</p>
+                  <p>{`${property.address.area}, ${property.address.city}, india`}</p>
                 </div>
-              </div>
+                <div className={style.right}>
+                  <button className={style.btn}>Contect Owner</button>
+                </div>
               
-              <div className={style.rightInfo}>
-                <div className={style.singleInfo}>
-                <FontAwesomeIcon icon={faPeopleRobbery}/>
-                <div>
-                  <p>Crime Rate</p>
-                  <span>0.5%</span>
+              </div>
+      
+              <div className={style.wrapper}>
+                <div className={style.imagesContainer}>
+                  <div className={style.leftImage}>
+                    <img className={style.img} src={property.image[0]}></img>
+                  </div>
+                  <div className={style.rightImage}>
+                    <img className={style.img} src={property.image[1]}></img>
+                    <div style={{backgroundImage: `url(${property.image[2]})`}} className={`${style.img} ${style.last}`} src={property.image[2]} onClick={() => setIsImagesOpen(true)}>
+                      <div className={style.overl}>
+                        <p>{`+${property.image.length - 2}`}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-                <div className={style.singleInfo}>
-                <FontAwesomeIcon icon={faPeopleRobbery}/>
-                <div>
-                  <p>Population</p>
-                  <span>1600</span>
-                </div>
+      
+                <div className={style.infoContainer}>
+                  <div className={style.infoWrapper}>
+      
+                    <div className={style.leftInfo}>
+                      <div className={style.singleInfo}>
+                      <FontAwesomeIcon icon={faBed}/>
+                        <div>
+                          <p>Size</p>
+                          <span>{property.size}</span>
+                        </div>
+                      </div>
+      
+                      <div className={style.singleInfo}>
+                        <FontAwesomeIcon icon={faPeopleRobbery}/>
+                        <div>
+                          <p>price</p>
+                          <span>{property.price}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className={style.rightInfo}>
+                      <div className={style.singleInfo}>
+                      <FontAwesomeIcon icon={faPeopleRobbery}/>
+                      <div>
+                        <p>Crime Rate</p>
+                        <span>{property.crimeRate}</span>
+                      </div>
+                      </div>
+                      <div className={style.singleInfo}>
+                      <FontAwesomeIcon icon={faPeopleRobbery}/>
+                      <div>
+                        <p>Population</p>
+                        <span>{property.population}</span>
+                      </div>
+                      </div>
+                    </div>
+      
+                  </div>
+                  <button className={style.btn}>Get owner details</button>
                 </div>
               </div>
-
-            </div>
-            <button>Get owner details</button>
-          </div>
-        </div>
-        </div>
+              </div>
+      : null}
+      <ImageGallery isOpen={isImagesOpen} set={setIsImagesOpen} image={property?.image}/>
       </>
       )
 }

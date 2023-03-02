@@ -22,7 +22,7 @@ function Properties() {
       <div style={{display: "flex", justifyContent:"center", flexWrap: "wrap",gap:"10px"}}>
 
       {properties?.map(p => {
-        return <SingleProperty p={p}/>
+        return <SingleProperty p={p} key={p._id}/>
       })}
       </div>
     </div>
