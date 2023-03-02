@@ -1,0 +1,59 @@
+.container {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > svg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: red;
+    margin: 1rem;
+    font-size: 2rem;
+}
+.wrapper {
+    background-color: black;
+    width: 1200px;
+    max-width: 90%;
+    height: 700px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    overflow-x: scroll;
+}
+.imagesWrapper {
+    display: flex;
+    gap: 1rem;
+}
+.imageWrapper {
+    height: 500px;
+}
+.img {
+    height: 100%;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #33fcff #000000;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #33fcff;
+    border-radius: 10px;
+    border: 3px solid #000000;
+  }
