@@ -1,15 +1,25 @@
 .navbar {
   position: sticky;
   top: 0;
-display: flex;
-background-color: black;
-color: white;
-justify-content: space-between;
-align-items: center;
-padding: 10px 20px;
-z-index: 1000;
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  height: 70px;
 }
-
+.nav_logo_wrapper{
+  transform: translateX(-50px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav_logo_wrapper > img {
+  object-fit: cover;
+  width: 200px;
+}
 .navbar-brand {
 font-size: 1.5rem;
 font-weight: bold;

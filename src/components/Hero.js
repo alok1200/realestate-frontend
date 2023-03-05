@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Hero.css";
+import { Link, useNavigate } from "react-router-dom";
+
 
 const Hero = () => {
+  const [search, setsearch] = useState("")
+  const navigate = useNavigate()
   return (
     <div className="hero">
       <img
@@ -14,10 +18,10 @@ const Hero = () => {
         <p className="hero-description">Search through our .</p>
         <div className="searchContainer"> 
           <div className="searchTop"> 
-            <span>recidental</span>
-            <span>Commercile</span>
-            <span>PG\Co-Living</span>
-            <span>Plots</span>  
+            <span><Link to="propertyies/residential">Residential</Link></span>
+            <span><Link to="propertyies/Commercial">Commercial</Link></span>
+            <span><Link to="propertyies/pgco">PG\Co-Living</Link></span>
+            <span><Link to="propertyies/plots">Plots</Link></span>  
           </div>
           <div className="searchBottom">
             <select>
@@ -29,8 +33,8 @@ const Hero = () => {
 
             </select> 
             <div></div>
-            <input placeholder="Search"></input>
-            <button>Search</button>
+            <input placeholder="Search" value={search} onChange={e => setsearch(e.target.value)}></input>
+            <button onClick={() => navigate(`/propertyies/all?s=${search}`)}>Search</button>
           </div>
         </div>
 

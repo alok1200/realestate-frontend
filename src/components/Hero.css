@@ -6,6 +6,10 @@
   flex-direction: column;
   align-items: center;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 
 .hero-image {
   width: 100%;
