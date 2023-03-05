@@ -1,11 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import NavBar from "../components/NavBar.js"
+import NavBar from "../../components/NavBar.js"
 import style from "./SinglePropertyPage.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed , faPeopleRobbery, faHome} from '@fortawesome/free-solid-svg-icons'
-import ImageGallery from '../components/Image gallary/ImageGallery.js'
+import ImageGallery from '../../components/Image gallary/ImageGallery.js'
 
 function SinglePropertyPage() {
   const location = useLocation()

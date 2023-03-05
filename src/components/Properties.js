@@ -3,12 +3,18 @@ import SingleProperty from './SingleProperty'
 import dataa from '../dummyProp.js'
 import axios from 'axios'
 
-function Properties() {
+function Properties({cat, limit, search}) {
   const [properties, setProperties] = useState()
 
   useEffect(() => {
     const fetchData = async () => {
-      const {data} = await axios.get("http://localhost:4000/property")
+      const filter = {}
+
+      if(search) filter.search = search;
+      if(cat) filter.cat = cat;
+      if(limit) filter.limit = limit;
+
+      const {data} = await axios.post("http://localhost:4000/property", {filter})
       setProperties(data)
       console.log(data)
     }
