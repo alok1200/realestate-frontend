@@ -1,10 +1,12 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import "./Hero.css";
 import { Link, useNavigate } from "react-router-dom";
 
 
 const Hero = () => {
   const [search, setsearch] = useState("")
+  const [states, setstates] = useState("")
+
   const navigate = useNavigate()
   return (
     <div className="hero">
@@ -24,7 +26,8 @@ const Hero = () => {
             <span><Link to="propertyies/plots">Plots</Link></span>  
           </div>
           <div className="searchBottom">
-            <select>
+            <select defaultValue={"all"} onChange={e => setstates(e.target.value)}>
+              <option value="all">All</option>
               <option>Mumbai</option>
               <option>Pune</option>
               <option>Kolkata</option>
@@ -34,7 +37,7 @@ const Hero = () => {
             </select> 
             <div></div>
             <input placeholder="Search" value={search} onChange={e => setsearch(e.target.value)}></input>
-            <button onClick={() => navigate(`/propertyies/all?s=${search}`)}>Search</button>
+            <button onClick={() => navigate(`/propertyies/all`,{state:{stateFilter: states, search}})}>Search</button>
           </div>
         </div>
 
