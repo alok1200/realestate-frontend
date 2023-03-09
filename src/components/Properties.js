@@ -1,15 +1,16 @@
 import React, {useEffect, useState} from 'react'
 import SingleProperty from './SingleProperty'
-import dataa from '../dummyProp.js'
 import axios from 'axios'
 
-function Properties({cat, limit, search}) {
+
+function Properties({cat, limit, search, states}) {
   const [properties, setProperties] = useState()
 
   useEffect(() => {
     const fetchData = async () => {
       const filter = {}
 
+      if(states) filter.state = states;
       if(search) filter.search = search;
       if(cat) filter.cat = cat;
       if(limit) filter.limit = limit;
@@ -20,7 +21,7 @@ function Properties({cat, limit, search}) {
     }
 
     fetchData()
-  }, [])
+  }, [states, search, cat, limit])
   
   return (
     <div >

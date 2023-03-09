@@ -5,12 +5,12 @@ import style from  "./ImageGallery.module.css"
 
 function ImageGallery({isOpen, set, image}) {
   return (
-    isOpen ? <div className={style.container}>
+    isOpen ? <div className={style.container} onClick={() => set(false)}>
         <FontAwesomeIcon icon={faXmark} onClick={() => set(false)}/>
-        <div className={style.wrapper}>
+        <div className={style.wrapper} onClick={e => e.stopPropagation()}>
             <div className={style.imagesWrapper}>
-                {image.map(i => {
-                    return <div className={style.imageWrapper}><img className={style.img} src={i}/></div>
+                {image.map((i, index) => {
+                    return <div className={style.imageWrapper}><img alt={`property ${index}`} className={style.img} src={i}/></div>
                 })}
             </div>
         </div>

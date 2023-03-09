@@ -7,16 +7,16 @@ import Properties from '../../components/Properties'
 function PropertiesPage() {
   const location = useLocation()
 
-  const query = new URLSearchParams(location.search);
-  const search = query.get("s");
-
+  const states = location.state?.stateFilter;
+  const search = location.state?.search;
+  
   const cat = location.pathname.split("/")[2];
 
 
   return (
     <>
         <Navbar/>
-        <Properties cat={(cat !== "all") ? cat : null} search={search}/>
+        <Properties cat={cat !== "all" && cat} search={search} states={states !== "all" && states}/>
     </>
   )
 }

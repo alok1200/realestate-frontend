@@ -28,11 +28,21 @@
 }
 
 .leftImage {
+    overflow: hidden;
+    position: relative;
     flex: 2;
     display: flex;
     align-items: center;
 }
-leftImage > img {
+.fullImg {
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    filter: blur(10px);
+    transform: scale(1.5);
+
+} 
+.leftImage > img {
     object-fit: cover;
     object-position: center;
 }

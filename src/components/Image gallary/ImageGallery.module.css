@@ -1,6 +1,6 @@
 .container {
     position: fixed;
-    inset: 0;
+    inset: 70px 0 0 0;
     background-color: rgba(0,0,0,0.9);
     display: flex;
     justify-content: center;
@@ -8,8 +8,8 @@
 }
 .container > svg {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 80px;
+    right: 10px;
     color: red;
     margin: 1rem;
     font-size: 2rem;

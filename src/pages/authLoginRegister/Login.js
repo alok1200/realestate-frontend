@@ -13,6 +13,7 @@ const Login = () => {
     event.preventDefault();
     try {   
       const {data} = await axios.post("http://localhost:4000/auth/login",{email: email, pass: password})
+      localStorage.setItem("user", JSON.stringify(data))
       navigate('/')
     } catch (error) {
       setMessage(error.response.data.message)
