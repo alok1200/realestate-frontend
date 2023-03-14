@@ -113,7 +113,7 @@ function SinglePropertyPage() {
       <iframe
         width="100%"
         height="500px"
-        src="https://maps.google.com/maps?q=+19.228196+,+72.858660+&hl=en&z=20&amp;output=embed"
+        src="https://maps.google.com/maps?q=+19.121607731495974, 72.86780826225758+&hl=en&z=20&amp;output=embed"
       />
       
 
