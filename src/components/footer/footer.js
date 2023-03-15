@@ -1,7 +1,8 @@
 import React from "react";
-import footer from './footer.css'
+import './footer.css'
 
-export const footer = () => {
+const Footer = () => {
+
   return (
     <>
       <section className="footerContact">
@@ -30,17 +31,6 @@ export const footer = () => {
         <input type="text" placeholder="Email adderess" name="id=" />
         <button>click to anather information</button>
       </div>
-      {footer.map((val) => (
-        <div className="box">
-          <h3>{Values.text}</h3>
-          <ul>
-            {values.text.map((item) =>(
-              <li>{user.list}</li>
-            ))
-            }
-          </ul>
-        </div>
-      ))}
       <div className="ligal">
         <span>
 
@@ -49,3 +39,5 @@ export const footer = () => {
     </>
   );
 };
+
+export default Footer

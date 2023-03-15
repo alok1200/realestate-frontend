@@ -22,7 +22,43 @@ function TopProperties() {
           <img src="https://images.news18.com/ibnlive/uploads/2022/06/sports-63.png" />
           <p>Hydrabad</p>
         </div>
-
+      </div>
+      <div className='maps'>
+        <div className='map'>
+          <iframe
+            width="100%"
+            height="500px"
+            src="https://maps.google.com/maps?&maptype=satellite&q=+19.0760° N, 72.8777° E+&hl=en&z=10&amp;output=embed"
+          />
+        </div>
+        <div className='map'>
+          <iframe
+            width="100%"
+            height="500px"
+            src="https://maps.google.com/maps?q=+28.7041° N, 77.1025° E+&hl=en&z=10&amp;output=embed"
+          />
+        </div>
+        <div className='map'>
+          <iframe
+            width="100%"
+            height="500px"
+            src="https://maps.google.com/maps?q=+17.3850° N, 78.4867° E+&hl=en&z=10&amp;output=embed"
+          />
+        </div>
+        <div className='map'>
+          <iframe
+            width="100%"
+            height="500px"
+            src="https://maps.google.com/maps?q=+12.9716° N, 77.5946° E+&hl=en&z=10&amp;output=embed"
+          />
+        </div>
+        <div className='map'>
+          <iframe
+            width="100%"
+            height="500px"
+            src="https://maps.google.com/maps?q=+18.5204° N, 73.8567° E+&hl=en&z=10&amp;output=embed"
+          />
+        </div>
       </div>
     </div>
   )

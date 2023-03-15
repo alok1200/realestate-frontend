@@ -46,3 +46,11 @@
   right: 0;
   z-index: 5;
 }
+
+.maps{
+  width: 100%;
+  display: flex;
+}
+.map {
+  flex: 1;
+}
