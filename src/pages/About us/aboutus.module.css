@@ -1,0 +1,16 @@
+.cantaner > p{
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+
+}
+
+.cantaner > h1{
+  margin-top: 35px;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

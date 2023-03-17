@@ -1,43 +1,45 @@
 import React from "react";
-import './footer.css'
+import styled from "./footer.module.css";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
-
   return (
     <>
-      <section className="footerContact">
-        <div className="container">
-          <div className="send file">
-            <div className="text">
-              <h1>Do you want any help</h1>
-              <p>ther is something</p>
-              <button className="btn5">contact as Today</button>
-            </div>
-          </div>
+      <div className={styled.footer}>
+        <img src={logo} className={styled.logo}></img>
+        <div className={styled.footer_itms}>
+          <p>Home</p>
+          <p>About</p>
+          <p>Contact</p>
+          <p>Properties</p>
         </div>
-      </section>
-      <footer>
-        <div className="Container">
-          <div className="box">
-            <div className="logo">
-              <img src="ter is some thing" alt="logo" />
-              <h2>taking some contant</h2>
-              <p>ther has some contant</p>
-            </div>
-          </div>
+        <div className={styled.footer_itms}>
+         <h3>Famous City</h3>
+         <p>Mumbai</p>
+         <p>Hydrabad</p>
+         <p>Delhi</p>
+         <p>Kolkata</p>
+         <p>puna</p>
         </div>
-      </footer>
-      <div>
-        <input type="text" placeholder="Email adderess" name="id=" />
-        <button>click to anather information</button>
-      </div>
-      <div className="ligal">
-        <span>
+        <div className={styled.footer_itms}>
+          <h3>Pricing</h3>
+          <p>Overview</p>
+          <p>less pricing</p>
+          <p>Premium Houses</p>
+          <p>Best place</p>
+        </div>
+        <div className={styled.socials}>
+          <h3>Social</h3>
+          <p>facebook</p>
+          <p>twitter</p>
+          <p>instagram</p>
+          <p>linkedin</p>
 
-        </span>
+        </div>
       </div>
+      <div className={styled.copyright}>© COPY RIGHT RESORVED BY DURGA REAL ESTATE</div>
     </>
   );
 };
 
-export default Footer
+export default Footer;

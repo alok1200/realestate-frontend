@@ -6,6 +6,8 @@ import style from "./SinglePropertyPage.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faPeopleRobbery, faHome, faHandHoldingDollar, faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
 import ImageGallery from '../../components/Image gallary/ImageGallery.js'
+import Footer from "../../components/footer/Footer"
+
 
 function SinglePropertyPage() {
   const location = useLocation()
@@ -115,6 +117,7 @@ function SinglePropertyPage() {
         height="500px"
         src="https://maps.google.com/maps?q=+19.121607731495974, 72.86780826225758+&hl=en&z=20&amp;output=embed"
       />
+      <Footer/>
       
 
     </>

@@ -5,6 +5,10 @@ import logo from '../assets/logo.png'
 
 const Navbar = () => {
   const user = JSON.parse(localStorage.getItem("user"))
+
+  const handleLogout = () => {
+    localStorage.clear()
+  }
   
   return (
     <nav className="navbar">
@@ -20,7 +24,7 @@ const Navbar = () => {
             <Link to="/login" className="navbar-link">Login</Link>
             <Link to="/register" className="navbar-link">Register</Link>
           </>  
-        : <Link to="/login" className="navbar-link">Logout</Link>
+        : <p onClick={handleLogout} className="navbar-link">Logout</p>
         }
       </div>
     </nav>

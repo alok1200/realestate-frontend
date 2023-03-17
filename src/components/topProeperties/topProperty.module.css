@@ -15,6 +15,7 @@
 }
 
 .topproperty_single {
+  position: relative;
   height: 200px;
   overflow: hidden;
 }
@@ -53,4 +54,8 @@
 }
 .map {
   flex: 1;
+}
+.topprop_hover {
+  position: absolute;
+  background-color: red;
 }

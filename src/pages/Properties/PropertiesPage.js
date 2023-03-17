@@ -2,6 +2,8 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import Navbar from '../../components/NavBar'
 import Properties from '../../components/Properties'
+import Footer from "../../components/footer/Footer"
+
 
 
 function PropertiesPage() {
@@ -17,6 +19,7 @@ function PropertiesPage() {
     <>
         <Navbar/>
         <Properties cat={cat !== "all" && cat} search={search} states={states !== "all" && states}/>
+        <Footer/>
     </>
   )
 }

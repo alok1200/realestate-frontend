@@ -3,6 +3,8 @@ import Hero from '../../components/Hero'
 import NavBar from '../../components/NavBar'
 import Properties from '../../components/Properties'
 import TopProperties from '../../components/topProeperties/TopProperties'
+import Footer from "../../components/footer/Footer"
+
 
 function Home() {
   return (
@@ -11,7 +13,7 @@ function Home() {
     <Hero/>
     <Properties limit={5} />
     <TopProperties/>
-   
+    <Footer/>
     </>
   )
 }
