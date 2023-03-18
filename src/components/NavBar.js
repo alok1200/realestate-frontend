@@ -2,11 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../assets/logo.png'
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../redux/userSlice';
 
 const Navbar = () => {
-  const user = JSON.parse(localStorage.getItem("user"))
+  const dispatch = useDispatch()
+  const user = useSelector(s => s.user)
 
   const handleLogout = () => {
+    dispatch(logout())
     localStorage.clear()
   }
   

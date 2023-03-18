@@ -11,7 +11,7 @@ function Home() {
     <>
     <NavBar/>
     <Hero/>
-    <Properties limit={5} />
+    <Properties limit={4} showMore={true}/>
     <TopProperties/>
     <Footer/>
     </>

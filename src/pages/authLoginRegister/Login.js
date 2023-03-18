@@ -2,8 +2,12 @@ import React, { useState, } from "react";
 import {useNavigate} from 'react-router-dom'
 import axios from "axios"
 import "./LoginRegister.css";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/userSlice";
+
 
 const Login = () => {
+  const dispatch = useDispatch()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -14,6 +18,7 @@ const Login = () => {
     try {   
       const {data} = await axios.post("http://localhost:4000/auth/login",{email: email, pass: password})
       localStorage.setItem("user", JSON.stringify(data))
+      dispatch(login(data))
       navigate('/')
     } catch (error) {
       setMessage(error.response.data.message)

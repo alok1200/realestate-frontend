@@ -3,7 +3,7 @@ import SingleProperty from './SingleProperty'
 import axios from 'axios'
 
 
-function Properties({cat, limit, search, states}) {
+function Properties({cat, limit, search, states, showMore}) {
   const [properties, setProperties] = useState()
 
   useEffect(() => {
@@ -32,6 +32,7 @@ function Properties({cat, limit, search, states}) {
         return <SingleProperty p={p} key={p._id}/>
       })}
       </div>
+      {showMore && <button>Browse More</button>}
     </div>
   )
 }

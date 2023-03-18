@@ -37,7 +37,7 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className={styled.copyright}>© COPY RIGHT RESORVED BY DURGA REAL ESTATE</div>
+      <div className={styled.copyright}>© COPY RIGHT RESERVED BY DURGA REAL ESTATE</div>
     </>
   );
 };

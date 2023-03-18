@@ -1,16 +1,12 @@
-import React from 'react'
-import styled from "./topProperty.module.css"
+import React from "react";
+import styled from "./topProperty.module.css";
 
 function TopProperties() {
   return (
-
     <div className={styled.topproperty}>
       <h1>Top States</h1>
-      <div className={styled.topproperty_wrapper}>
-        <div className={styled.topproperty_single}>
-        <div className={styled.topprop_hover}>
-          <p>hemlloooos</p>
-        </div>
+      <div className={styled.topproperty_wrapper} >
+        <div className={styled.topproperty_single} >
           <img src="https://media.istockphoto.com/id/860528756/photo/the-bandraworli-sea-link-mumbai-india.jpg?s=612x612&w=0&k=20&c=xT9TK7oYkP6TP62lHqP0H-9mfz9cWva4OcYEnt06cjc=" />
           <p>Mumbai</p>
         </div>
@@ -32,7 +28,7 @@ function TopProperties() {
         </div>
       </div>
       <div className={styled.maps}>
-        <div className='map'>
+        <div className="map">
           <iframe
             width="100%"
             height="500px"
@@ -69,7 +65,7 @@ function TopProperties() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default TopProperties
+export default TopProperties;
