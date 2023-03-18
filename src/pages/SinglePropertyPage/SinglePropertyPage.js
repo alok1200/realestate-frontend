@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faPeopleRobbery, faHome, faHandHoldingDollar, faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
 import ImageGallery from '../../components/Image gallary/ImageGallery.js'
 import Footer from "../../components/footer/Footer"
+import TermsAndConditions from '../../components/termsAndConditions/TermsAndConditions.js'
 
 
 function SinglePropertyPage() {
@@ -27,8 +28,9 @@ function SinglePropertyPage() {
     })()
   }, [id])
 
-  console.log(property)
 
+  //Terms and conditions
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
@@ -105,12 +107,12 @@ function SinglePropertyPage() {
                 </div>
 
               </div>
-              <button className={style.btn}>Get owner details</button>
+              <button className={style.btn} onClick={() =>setIsOpen(true)}>Get owner details</button>
             </div>
           </div>
         </div>
         : null}
-      <ImageGallery isOpen={isImagesOpen} set={setIsImagesOpen} image={property?.image} />
+      <ImageGallery isOpen={isImagesOpen} set={setIsImagesOpen} image={property?.image}/>
 
       <iframe
         width="100%"
@@ -118,7 +120,7 @@ function SinglePropertyPage() {
         src="https://maps.google.com/maps?q=+19.121607731495974, 72.86780826225758+&hl=en&z=20&amp;output=embed"
       />
       <Footer/>
-      
+      <TermsAndConditions isOpen={isOpen} setIsOpen={setIsOpen}/>
 
     </>
   )
