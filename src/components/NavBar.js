@@ -7,11 +7,10 @@ import { logout } from '../redux/userSlice';
 
 const Navbar = () => {
   const dispatch = useDispatch()
-  const user = useSelector(s => s.user)
+  const user = useSelector(s => s.user.user)
 
   const handleLogout = () => {
     dispatch(logout())
-    localStorage.clear()
   }
   
   return (

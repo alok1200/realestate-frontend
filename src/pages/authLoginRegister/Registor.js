@@ -17,7 +17,6 @@ const Register = () => {
       password: password
     }
     )
-    console.log(data.message)
     setMessage(data.message)
 
     } catch (error) {

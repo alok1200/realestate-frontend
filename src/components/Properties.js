@@ -17,7 +17,6 @@ function Properties({cat, limit, search, states, showMore}) {
 
       const {data} = await axios.post("http://localhost:4000/property", {filter})
       setProperties(data)
-      console.log(data)
     }
 
     fetchData()
