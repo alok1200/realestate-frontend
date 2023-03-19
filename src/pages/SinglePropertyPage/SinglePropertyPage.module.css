@@ -7,6 +7,7 @@
 }
 
 .wrapper {
+    margin-bottom: 2rem;
     display: flex;
     width: 1800px;
     max-width: 90%;
@@ -68,6 +69,7 @@
     align-items: center;
 }
 .infoWrapper {
+    
     display: flex;
     flex-wrap: wrap;
     width: 100%;

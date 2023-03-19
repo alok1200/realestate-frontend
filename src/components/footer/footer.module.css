@@ -5,30 +5,13 @@
   align-items: center;
   justify-content: center;
   color: white;
-
 }
-
 .footer>*{
   flex:1;
 }
 .logo{
   margin-left : 1rem;
-  background-image: url();
 }
-.footer_itms{
-/* display: flex; */
-
-}
-
-
-
-
-
-
-
-
-
-
 
 .copyright{
   height: 65px;
