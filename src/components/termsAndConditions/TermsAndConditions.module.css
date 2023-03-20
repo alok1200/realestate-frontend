@@ -18,7 +18,7 @@
     border-radius: 0.5rem;
     overflow-y: auto;
   }
-  .wrapper > p,h1 {
+  .wrapper > p,h1,input {
     margin: 1rem 2rem;
   }
 
@@ -46,7 +46,7 @@
     margin-bottom: 0;
   }
   
-  .btnWrapper > button {
+  .btnWrapper  button {
     background-color: teal;
     margin: 0.5rem 1rem;
     color: #fff;
@@ -67,6 +67,23 @@
     background-color: #eee;
     display: flex;
     justify-content: flex-end;
+  }
+
+  .check {
+    display: flex;
+    align-items: center;
+  } 
+  .check > input {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+  }
+
+
+  .disabled {
+    background-color: rgb(0, 216, 216) !important;
+    color: grey !important;
+    cursor: not-allowed !important;
   }
 
 
