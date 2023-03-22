@@ -1,28 +1,30 @@
 import React from "react";
 import styled from "./topProperty.module.css";
+import { useNavigate } from 'react-router-dom'
 
 function TopProperties() {
+  const navigate = useNavigate()
   return (
     <div className={styled.topproperty}>
       <h1>Top States</h1>
       <div className={styled.topproperty_wrapper} >
-        <div className={styled.topproperty_single} >
+        <div className={styled.topproperty_single}   onClick={() => navigate("/propertyies/all", {state: {stateFilter: "mumbai"}})}>
           <img src="https://media.istockphoto.com/id/860528756/photo/the-bandraworli-sea-link-mumbai-india.jpg?s=612x612&w=0&k=20&c=xT9TK7oYkP6TP62lHqP0H-9mfz9cWva4OcYEnt06cjc=" />
           <p>Mumbai</p>
         </div>
-        <div className={styled.topproperty_single}>
+        <div className={styled.topproperty_single}  onClick={() => navigate("/propertyies/all", {state: {stateFilter: "delhi"}})}>
           <img src="https://cdn.britannica.com/37/189837-050-F0AF383E/New-Delhi-India-War-Memorial-arch-Sir.jpg" />
           <p>Delhi</p>
         </div>
-        <div className={styled.topproperty_single}>
+        <div className={styled.topproperty_single}  onClick={() => navigate("/propertyies/all", {state: {stateFilter: "kolkata"}})}>
           <img src="https://cdn.britannica.com/91/110191-050-7BCFD56B/Victoria-Memorial-Hall-Kolkata-India.jpg" />
           <p>Kolkata</p>
         </div>
-        <div className={styled.topproperty_single}>
+        <div className={styled.topproperty_single}  onClick={() => navigate("/propertyies/all", {state: {stateFilter: "hydrabad"}})}>
           <img src="https://images.news18.com/ibnlive/uploads/2022/06/sports-63.png" />
           <p>Hydrabad</p>
         </div>
-        <div className={styled.topproperty_single}>
+        <div className={styled.topproperty_single}  onClick={() => navigate("/propertyies/all", {state: {stateFilter: "pune"}})}>
           <img src="https://www.fabhotels.com/blog/wp-content/uploads/2022/07/600X400_4-min-1280x720.jpg" />
           <p>Pune</p>
         </div>
