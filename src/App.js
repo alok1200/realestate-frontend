@@ -8,6 +8,7 @@ import SinglePropertyPage from './pages/SinglePropertyPage/SinglePropertyPage';
 import PropertiesPage from './pages/Properties/PropertiesPage';
 import Aboutus from './pages/About us/Aboutus';
 import SellerRegister from './pages/authLoginRegister/SellerRegister';
+import AddProperty from './pages/addProperty/AddProperty';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path='/property/:id' element={<SinglePropertyPage/>}/>
       <Route path='/propertyies/:cat' element={<PropertiesPage/>}/>
       <Route path='/about' element={<Aboutus/>}/>
+      <Route path="/addproperty" element={<AddProperty/>}/>
     </Routes>
     {/* <Footer/> */}
     </>
