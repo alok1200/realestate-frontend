@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {   
-      const {data} = await axios.post("https://alok-shop.onrender.com//auth/login",{email: email, pass: password})
+      const {data} = await axios.post("https://alok-shop.onrender.com/auth/login",{email: email, pass: password})
       dispatch(login(data))
       navigate('/')
     } catch (error) {

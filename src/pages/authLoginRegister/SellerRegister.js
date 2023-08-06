@@ -24,7 +24,7 @@ const SellerRegister = () => {
         console.log(result)
         if(!result.success) return setMessage(result.message)
         try {
-            const { data } = await axios.post("https://alok-shop.onrender.com//auth/seller/register", {
+            const { data } = await axios.post("https://alok-shop.onrender.com/auth/seller/register", {
                 name: FullName,
                 email: email,
                 password: password,

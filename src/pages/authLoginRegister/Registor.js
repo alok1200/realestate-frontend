@@ -11,7 +11,7 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {   
-      const {data} = await axios.post("https://alok-shop.onrender.com//auth/register",{
+      const {data} = await axios.post("https://alok-shop.onrender.com/auth/register",{
       name: FullName,
       email: email, 
       password: password
