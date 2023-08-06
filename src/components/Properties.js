@@ -26,7 +26,7 @@ function Properties({ cat, limit, search, states, showMore }) {
       if (cat) filter.cat = cat;
       if (limit) filter.limit = limit;
 
-      const { data } = await axios.post("http://localhost:4000/property", { filter })
+      const { data } = await axios.post("https://alok-shop.onrender.com//property", { filter })
       setProperties(data)
     }
 

@@ -19,7 +19,7 @@ function SinglePropertyPage() {
   useEffect(() => {
     (async () => {
       try {
-        const { data } = await axios.get(`http://localhost:4000/property/${id}`)
+        const { data } = await axios.get(`https://alok-shop.onrender.com//property/${id}`)
         setProperty(data)
       } catch (err) {
         console.log(err)
